@@ -1,6 +1,6 @@
 package org.example.controller;
 
-import org.example.common.RecipientRequest;
+import org.example.common.request.RecipientRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,6 @@
 package org.example.controller;
 
-import org.example.common.VoucherRequest;
+import org.example.common.request.VoucherRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +22,7 @@ public class VoucherController {
 
     /** Redeem existing voucher */
     @PostMapping(value = "/redeem/{code}")
-    public ResponseEntity<?> newVoucher(@PathVariable String code) {
+    public ResponseEntity<?> redeemVoucher(@PathVariable String code) {
         return null;
     }
 }
