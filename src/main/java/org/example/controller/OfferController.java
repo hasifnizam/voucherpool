@@ -28,10 +28,10 @@ public class OfferController {
         List<OfferEntity> offerList = offerService.getAllOffer();
 
         //Check if offer list is empty or not
-        if (!offerList.isEmpty()) {
-            return ResponseHandler.generateResponse(HttpStatus.OK, CommonConstant.SUCCESSFUL, offerList);
+        if (offerList.isEmpty()) {
+            return ResponseHandler.generateResponse(HttpStatus.OK, CommonConstant.NO_RECORD, offerList);
         }
-        return ResponseHandler.generateResponse(HttpStatus.OK, CommonConstant.NO_RECORD, offerList);
+        return ResponseHandler.generateResponse(HttpStatus.OK, CommonConstant.SUCCESSFUL, offerList);
     }
 
     /** Create new offer */
