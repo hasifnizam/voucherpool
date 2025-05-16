@@ -55,4 +55,4 @@ After running the service, you can open it in localhost as per below.
 
 4. Test with Postman
 
-   Open Postman and import the collection from Voucher Pool.postman_collection. You can start testing the API endpoints as per the collection.
+   Open Postman and import the collection from **Voucher Pool.postman_collection**. You can start testing the API endpoints as per the collection.
