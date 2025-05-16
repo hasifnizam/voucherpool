@@ -3,6 +3,8 @@ package org.example.repository;
 import org.example.entity.OfferEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface OfferRepository extends JpaRepository<OfferEntity, Integer> {
-    
+import java.util.Optional;
+
+public interface OfferRepository extends JpaRepository<OfferEntity, String> {
+    Optional<OfferEntity> findByName(String offerName);
 }

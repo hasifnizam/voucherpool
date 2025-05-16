@@ -41,7 +41,7 @@ public class OfferController {
             OfferEntity offer = offerService.createNewOffer(request);
             return ResponseHandler.generateResponse(HttpStatus.OK, CommonConstant.SUCCESSFUL, offer);
         } catch (ServiceException e) {
-            return ResponseHandler.generateResponse(HttpStatus.INTERNAL_SERVER_ERROR, CommonConstant.FAILED, null);
+            return ResponseHandler.generateResponse(e.getStatus(), CommonConstant.FAILED, null);
         }
     }
 }

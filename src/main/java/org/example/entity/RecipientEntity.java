@@ -12,13 +12,10 @@ import lombok.ToString;
 @ToString
 public class RecipientEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer id;
-
     @Column(nullable = false)
     private String name;
 
+    @Id
     @Column(nullable = false, unique = true)
     private String email;
 }

@@ -7,6 +7,7 @@ import org.example.exception.ServiceException;
 import org.example.repository.RecipientRepository;
 import org.example.service.RecipientService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -35,7 +36,7 @@ public class RecipientServiceImpl implements RecipientService {
             return recipientRepository.save(recipient);
         } catch (Exception e) {
             log.error("Error while registering new user. :", e);
-            throw new ServiceException("Failed to register new user. Email already exist", e);
+            throw new ServiceException("Failed to register new user. Email already exist", e, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }

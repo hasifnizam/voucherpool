@@ -39,7 +39,7 @@ public class RecipientController {
             RecipientEntity recipient = recipientService.registerNewUser(request);
             return ResponseHandler.generateResponse(HttpStatus.OK, CommonConstant.SUCCESSFUL, recipient);
         } catch (ServiceException e) {
-            return ResponseHandler.generateResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage(), null);
+            return ResponseHandler.generateResponse(e.getStatus(), e.getMessage(), null);
         }
     }
 }

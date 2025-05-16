@@ -13,9 +13,6 @@ import lombok.ToString;
 public class OfferEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer id;
-
     @Column(nullable = false, unique = true)
     private String name;
 

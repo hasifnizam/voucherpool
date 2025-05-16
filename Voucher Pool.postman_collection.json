@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "5208970d-b4f5-4a4e-a8a8-3902bd4ad2e5",
+		"name": "Voucher Pool",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19377218",
+		"_collection_link": "https://cloudy-space-554041.postman.co/workspace/RCBO~84709abf-d77e-4857-843e-bf7c06c3daa4/collection/19377218-5208970d-b4f5-4a4e-a8a8-3902bd4ad2e5?action=share&source=collection_link&creator=19377218"
+	},
+	"item": [
+		{
+			"name": "List Offer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/offer/v1/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"offer",
+						"v1",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Offer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Raya Haji Deals\",\r\n    \"discount\": 45\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/offer/v1/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"offer",
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Recipient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/recipient/v1/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipient",
+						"v1",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Recipient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Hasif Nizam\",\r\n    \"email\": \"hasif@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/recipient/v1/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipient",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Voucher",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/recipient/v1/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipient",
+						"v1",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Voucher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"offerName\": \"ntah\",\r\n    \"recipientEmail\": \"email\",\r\n    \"validDays\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/voucher/v1/generate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"voucher",
+						"v1",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Redeem Voucher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"offerName\": \"ntah\",\r\n    \"recipientEmail\": \"email\",\r\n    \"validDays\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/voucher/v1/generate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"voucher",
+						"v1",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

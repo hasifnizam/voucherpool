@@ -7,6 +7,7 @@ import org.example.exception.ServiceException;
 import org.example.repository.OfferRepository;
 import org.example.service.OfferService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,7 +35,7 @@ public class OfferServiceImpl implements OfferService {
             return offerRepository.save(offer);
         } catch (Exception e) {
             log.error("Error while create new offer:", e);
-            throw new ServiceException("Failed to create offer", e);
+            throw new ServiceException("Failed to create offer", e, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
