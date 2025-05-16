@@ -8,14 +8,14 @@ Before you begin, ensure you have met the following requirements:
 - Java 21 installed on your machine
 - Postman for testing purposes
 
-## How about the database?
+## Database
 
-Don’t worry. for this demo purpose, I’m using an H2 in-memory database.
+For this demo purpose, I’m using an H2 in-memory database.
 - H2 is an in-memory database, so it runs entirely in memory
 - No setup, no installation, and it executes super fast.
-- You don’t need to configure or install a full database server like MySQL or PostgreSQL. It works out of the box with Spring Boot.
+- You don’t need to configure or install a full database server. It works out of the box with Spring Boot.
 
-## How to open database?
+## How to open database
 
 After running the service, you can open it in localhost as per below.
 
